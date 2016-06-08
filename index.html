@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Markdownコピペ（Qiita用）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+   <section>
+    <h1>Markdownコピペ（Qiita用）</h1>
+    <p>左側のリンクをクリックすると、<br>
+    右側のテキストエリアに記載されているMarkdown記法がコピーできます。</p>
+    <section>
+      <h3>対応ブラウザ</h3>
+      <ul>
+        <li>Chrome 42+ 以上</li>
+        <li>Firefox 41+ 以上</li>
+        <li>IE 9+ 以上</li>
+        <li>Opera 29+ 以上</li>
+        <li>Safariは対応していません。</li>
+      </ul>
+    </section>
+
+    <div class="container">
+<!-- ▼▼▼▼▼▼▼▼▼▼▼ Markdown記法リスト START ▼▼▼▼▼▼▼▼▼▼▼ -->
+
+      <!-- コードの挿入 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#code">
+            コードの挿入
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="code" readonly>
+
+  ```ruby:qiita.rb
+  puts 'The best way to log and share programmers knowledge.'
+  ```
+
+</textarea>
+        </div>
+      </div>
+
+      <!-- 太字 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#bold">
+            太字
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="bold" readonly>
+**太字**
+</textarea>
+        </div>
+      </div>
+
+      <!-- 打ち消し線 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#strike">
+            打ち消し線
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="strike" readonly>
+~~打ち消し~~
+</textarea>
+        </div>
+      </div>
+
+      <!-- 箇条書きリスト -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#list">
+            箇条書きリスト
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="list" readonly>
+
+* リスト
+* リスト
+* リスト
+
+</textarea>
+        </div>
+      </div>
+
+      <!-- 番号リスト -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#decimal">
+            番号リスト
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="decimal" readonly>
+
+1. リスト
+1. リスト
+1. リスト
+
+</textarea>
+        </div>
+      </div>
+
+      <!-- 定義/説明リスト（dl/dt/dd） -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#definition">
+            定義/説明リスト(dl/dt/dd)
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="definition" readonly>
+<dl>
+  <dt>リンゴ</dt>
+  <dd>赤いフルーツ</dd>
+  <dt>オレンジ</dt>
+  <dd>橙色のフルーツ</dd>
+</dl>
+</textarea>
+        </div>
+      </div>
+
+      <!-- コードの挿入 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#blockquotes">
+            引用（Blockquotes）
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="blockquotes" readonly>
+
+> ネストする
+> ネストする
+> ネストする
+
+</textarea>
+        </div>
+      </div>
+
+      <!-- 水平線 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#horizon">
+            水平線
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="horizon" readonly>
+---------------------------------------
+</textarea>
+        </div>
+      </div>
+
+      <!-- リンク -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#links">
+            リンク
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="links" readonly>
+[表示名](URL)
+</textarea>
+        </div>
+      </div>
+
+      <!-- 画像 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#images">
+            画像
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="images" readonly>
+![表示名](url "ALT属性")
+</textarea>
+        </div>
+      </div>
+
+      <!-- テーブル・表   -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#table">
+            テーブル・表
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="table" readonly>
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |      column |    column    |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
+</textarea>
+        </div>
+      </div>
+
+      <!-- octocat絵文字 -->
+      <div class="row clear">
+        <div class="col-3">
+          <button class="button-link" data-clipboard-action="copy" data-clipboard-target="#images">
+            octocat絵文字
+          </button>
+        </div>
+        <div class="col-9">
+<textarea id="images" readonly>
+:octocat:
+</textarea>
+        </div>
+      </div>
+
+      <!-- 絵文字 -->
+      <p>
+        絵文字は以下からコピーしてね。<br>
+        <a href="http://www.emoji-cheat-sheet.com" target="_blank">http://www.emoji-cheat-sheet.com</a>
+      </p>
+
+<!-- △△△△△△△△△△ Markdown記法リスト E N D △△△△△△△△△△ -->
+    </div>
+
+  <script src="./js/clipboard.min.js"></script>
+  <script>
+    var clipboard = new Clipboard('.button-link');
+    clipboard.on('error', function(e) {
+      alert('コピーに失敗しました。');
+    });
+  </script>
+
+<!-- Google Analytics - Update UA-XXXXX-X ID -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.schedule-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    
+    <footer><small>&copy;sararilfy</small></footer>
+    </section>  
+  </div>
+</body>
+</html>
